@@ -75,6 +75,9 @@ export default function Portfolio() {
           <a href="mailto:ysumit99@gmail.com" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition-all">
             Let's Talk <Mail size={18} />
           </a>
+          <a href="https://sumityadav-dev.vercel.app" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-800 transition-all">
+            <BookOpen size={18} /> Blog
+          </a>
           <a href="https://github.com/ysumit99" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-800 transition-all">
             <FaGithub size={18} /> GitHub
           </a>
