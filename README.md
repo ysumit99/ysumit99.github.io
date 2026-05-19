@@ -79,4 +79,11 @@ I am actively seeking Staff Engineer and Technical Leadership roles. If you are 
 - [Technical Blog](https://sumityadav-dev.vercel.app/)
 
 ---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
 *Designed and engineered by Sumit Yadav. © 2026*
