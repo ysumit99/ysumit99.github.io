@@ -43,6 +43,31 @@ const ARTICLES = [
   { title: "CAP Theorem Explained with Real-World Examples", link: "https://sumityadav-dev.vercel.app/blog/cap-theorem-explained" }
 ];
 
+const ARCHITECTURES = [
+  {
+    title: "Real-Time Notification Engine Architecture",
+    description: "Event-driven architecture using SSE, Redis persistence, QStash fan-out workers, and multi-channel delivery.",
+    image: "/architecture/realtime-notification.svg",
+    link: "https://github.com/ysumit99/next-realtime-notifications"
+  },
+  {
+    title: "AI RAG Pipeline Architecture",
+    description: "End-to-end Retrieval-Augmented Generation pipeline featuring document ingestion, semantic chunking, vector embeddings, Pinecone retrieval, prompt augmentation, and streaming AI responses.",
+    image: "/architecture/rag-pipeline-architecture.svg",
+    link: "https://github.com/ysumit99/next-rag-assistant"
+  }
+];
+
+const CURRENTLY_EXPLORING = [
+  "AI Agents & Tool Calling",
+  "Advanced RAG Evaluation",
+  "Distributed Systems Design",
+  "Kafka & Event Streaming",
+  "Edge Runtime Architectures",
+  "System Design for Scale",
+  "Realtime Collaboration Systems"
+];
+
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-blue-500/30 selection:text-blue-200">
@@ -149,6 +174,50 @@ export default function Portfolio() {
         </div>
       </section>
 
+      <section className="border-t border-slate-900 bg-slate-900/20">
+        <div className="max-w-5xl mx-auto px-6 py-20 space-y-10">
+          
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+              Architecture & System Design
+            </h2>
+            <div className="h-1 w-12 bg-blue-500 rounded"></div>
+            <p className="text-slate-400 max-w-2xl">
+              High-level architecture breakdowns of distributed systems,
+              real-time platforms, and AI-powered applications.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {ARCHITECTURES.map((item, i) => (
+              <a
+                key={item.title}
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/40 transition-all flex flex-col h-full"
+              >
+               <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-[340px] object-contain p-6 bg-slate-950/40 border-b border-slate-800"
+              />
+
+                <div className="p-6 space-y-3">
+                  <h3 className="text-lg font-semibold text-white">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-sm text-slate-400 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Technical Writing */}
       <section className="border-t border-slate-900 bg-slate-950">
         <div className="max-w-5xl mx-auto px-6 py-20 space-y-10">
@@ -175,6 +244,35 @@ export default function Portfolio() {
           <a href="https://sumityadav-dev.vercel.app" target="_blank" rel="noreferrer" className="md:hidden inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium pt-4">
             Read all posts <ArrowRight size={16} />
           </a>
+        </div>
+      </section>
+      
+      <section className="border-t border-slate-900 bg-slate-950">
+        <div className="max-w-5xl mx-auto px-6 py-20 space-y-8">
+          
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+              Currently Exploring
+            </h2>
+
+            <div className="h-1 w-12 bg-blue-500 rounded"></div>
+
+            <p className="text-slate-400 max-w-2xl">
+              Continuously deepening expertise across distributed systems,
+              AI engineering, cloud-native architecture, and scalable platform design.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            {CURRENTLY_EXPLORING.map((item, i) => (
+              <span
+                key={i}
+                className="px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-slate-300 text-sm hover:border-blue-500/40 transition-all"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 

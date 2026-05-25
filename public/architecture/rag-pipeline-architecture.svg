@@ -1,0 +1,159 @@
+<svg width="1400" height="920" viewBox="0 0 1400 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"></polygon>
+    </marker>
+
+    <style>
+      .title {
+        font: 700 20px Inter, system-ui, sans-serif;
+        fill: #f8fafc;
+      }
+
+      .label {
+        font: 600 15px Inter, system-ui, sans-serif;
+        fill: #e2e8f0;
+      }
+
+      .small {
+        font: 500 13px Inter, system-ui, sans-serif;
+        fill: #94a3b8;
+      }
+
+      .box {
+        fill: #0f172a;
+        stroke: #334155;
+        stroke-width: 2;
+      }
+
+      .processing {
+        fill: #3f1d2e;
+        stroke: #f472b6;
+        stroke-width: 2;
+      }
+
+      .vector {
+        fill: #064e3b;
+        stroke: #34d399;
+        stroke-width: 2;
+      }
+
+      .ai {
+        fill: #172554;
+        stroke: #60a5fa;
+        stroke-width: 2;
+      }
+
+      .arrow {
+        stroke: #94a3b8;
+        stroke-width: 2.5;
+        fill: none;
+        marker-end: url(#arrowhead);
+      }
+    </style>
+  </defs>
+
+  <!-- Title -->
+
+  <text x="40" y="50" class="title">
+    Production RAG Pipeline Architecture
+  </text>
+
+  <!-- Upload Pipeline -->
+
+  <rect x="60" y="140" width="240" height="80" rx="18" class="box"></rect>
+  <text x="180" y="185" text-anchor="middle" class="label">
+    User Uploads PDF
+  </text>
+
+  <rect x="400" y="140" width="240" height="80" rx="18" class="box"></rect>
+  <text x="520" y="185" text-anchor="middle" class="label">
+    Next.js Upload API
+  </text>
+
+  <rect x="740" y="140" width="280" height="80" rx="18" class="processing"></rect>
+  <text x="880" y="185" text-anchor="middle" class="label">
+    PDF Parsing &amp; Chunking
+  </text>
+
+  <rect x="1120" y="140" width="220" height="80" rx="18" class="processing"></rect>
+  <text x="1230" y="185" text-anchor="middle" class="label">
+    Embeddings
+  </text>
+
+  <!-- Vector DB -->
+
+  <rect x="1120" y="370" width="220" height="80" rx="18" class="vector"></rect>
+  <text x="1230" y="415" text-anchor="middle" class="label">
+    Pinecone Vector DB
+  </text>
+
+  <!-- Query Pipeline -->
+
+  <rect x="60" y="620" width="240" height="80" rx="18" class="box"></rect>
+  <text x="180" y="665" text-anchor="middle" class="label">
+    User Question
+  </text>
+
+  <rect x="400" y="620" width="240" height="80" rx="18" class="box"></rect>
+  <text x="520" y="665" text-anchor="middle" class="label">
+    Streaming Chat API
+  </text>
+
+  <rect x="740" y="620" width="280" height="80" rx="18" class="processing"></rect>
+  <text x="880" y="665" text-anchor="middle" class="label">
+    Semantic Vector Search
+  </text>
+
+  <rect x="740" y="800" width="280" height="80" rx="18" class="processing"></rect>
+  <text x="880" y="845" text-anchor="middle" class="label">
+    Prompt Augmentation
+  </text>
+
+  <!-- Gemini -->
+
+  <rect x="1120" y="800" width="220" height="80" rx="18" class="ai"></rect>
+  <text x="1230" y="838" text-anchor="middle" class="label">
+    Google Gemini 2.5
+  </text>
+
+  <!-- Upload Flow -->
+
+  <line x1="300" y1="180" x2="400" y2="180" class="arrow"></line>
+
+  <line x1="640" y1="180" x2="740" y2="180" class="arrow"></line>
+
+  <line x1="1020" y1="180" x2="1120" y2="180" class="arrow"></line>
+
+  <!-- Embedding Storage -->
+
+  <line x1="1230" y1="220" x2="1230" y2="370" class="arrow"></line>
+
+  <!-- Query Flow -->
+
+  <line x1="300" y1="660" x2="400" y2="660" class="arrow"></line>
+
+  <line x1="640" y1="660" x2="740" y2="660" class="arrow"></line>
+
+  <!-- Semantic Retrieval -->
+
+  <polyline points="1020,660 1080,660 1080,450 1230,450" class="arrow"></polyline>
+
+  <text x="1095" y="535" class="small">
+    Semantic Retrieval
+  </text>
+
+  <!-- Context Retrieval -->
+
+  <polyline points="1230,450 1230,840 1020,840" class="arrow"></polyline>
+
+  <text x="1170" y="655" class="small">
+    Context Retrieval
+  </text>
+
+  <!-- Final Generation -->
+
+  <line x1="1020" y1="850" x2="1120" y2="850" class="arrow"></line>
+
+</svg>
