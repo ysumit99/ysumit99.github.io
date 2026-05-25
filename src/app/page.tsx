@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, ArrowRight, Server, Cloud, BookOpen, PenTool, BrainCircuit } from 'lucide-react';
+import { Mail, ArrowRight, Server, Cloud, BookOpen, PenTool, BrainCircuit, Download } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const PROJECTS = [
@@ -43,6 +43,31 @@ const ARTICLES = [
   { title: "CAP Theorem Explained with Real-World Examples", link: "https://sumityadav-dev.vercel.app/blog/cap-theorem-explained" }
 ];
 
+const ARCHITECTURES = [
+  {
+    title: "Real-Time Notification Engine Architecture",
+    description: "Event-driven architecture using SSE, Redis persistence, QStash fan-out workers, and multi-channel delivery.",
+    image: "/architecture/realtime-notification.svg",
+    link: "https://github.com/ysumit99/next-realtime-notifications"
+  },
+  {
+    title: "AI RAG Pipeline Architecture",
+    description: "End-to-end Retrieval-Augmented Generation pipeline featuring document ingestion, semantic chunking, vector embeddings, Pinecone retrieval, prompt augmentation, and streaming AI responses.",
+    image: "/architecture/rag-pipeline-architecture.svg",
+    link: "https://github.com/ysumit99/next-rag-assistant"
+  }
+];
+
+const CURRENTLY_EXPLORING = [
+  "AI Agents & Tool Calling",
+  "Advanced RAG Evaluation",
+  "Distributed Systems Design",
+  "Kafka & Event Streaming",
+  "Edge Runtime Architectures",
+  "System Design for Scale",
+  "Realtime Collaboration Systems"
+];
+
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-blue-500/30 selection:text-blue-200">
@@ -63,7 +88,7 @@ export default function Portfolio() {
           </h2>
           <p className="text-slate-400 max-w-2xl text-lg md:text-xl leading-relaxed">
             Full-Stack · Distributed Systems · AI Engineering<br/>
-            Building scalable platforms with React, Next.js, Node.js, TypeScript, AWS, Vercel, and AI integrations.
+            Designing scalable cloud-native platforms, real-time systems, and AI-powered applications with modern web technologies.
           </p>
         </div>
 
@@ -74,6 +99,9 @@ export default function Portfolio() {
         <div className="flex flex-wrap gap-4 pt-4">
           <a href="mailto:ysumit99@gmail.com" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition-all">
             Let's Talk <Mail size={18} />
+          </a>
+          <a href="/Sumit_Yadav_Resume_2026.pdf" download className="inline-flex items-center gap-2 bg-white text-slate-900 hover:bg-slate-200 px-6 py-3 rounded-lg font-semibold transition-all">
+            <Download size={18} /> Download Resume
           </a>
           <a href="https://sumityadav-dev.vercel.app" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-800 transition-all">
             <BookOpen size={18} /> Blog
@@ -145,6 +173,51 @@ export default function Portfolio() {
           ))}
         </div>
       </section>
+      
+      {/* Architecture & System Design */}
+      <section className="border-t border-slate-900 bg-slate-900/20">
+        <div className="max-w-5xl mx-auto px-6 py-20 space-y-10">
+          
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+              Architecture & System Design
+            </h2>
+            <div className="h-1 w-12 bg-blue-500 rounded"></div>
+            <p className="text-slate-400 max-w-2xl">
+              High-level architecture breakdowns of distributed systems,
+              real-time platforms, and AI-powered applications.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {ARCHITECTURES.map((item, i) => (
+              <a
+                key={item.title}
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/40 transition-all flex flex-col h-full"
+              >
+               <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-[340px] object-contain p-6 bg-slate-950/40 border-b border-slate-800"
+              />
+
+                <div className="p-6 space-y-3">
+                  <h3 className="text-lg font-semibold text-white">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-sm text-slate-400 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Technical Writing */}
       <section className="border-t border-slate-900 bg-slate-950">
@@ -174,6 +247,35 @@ export default function Portfolio() {
           </a>
         </div>
       </section>
+      
+      <section className="border-t border-slate-900 bg-slate-950">
+        <div className="max-w-5xl mx-auto px-6 py-20 space-y-8">
+          
+          <div className="space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+              Currently Exploring
+            </h2>
+
+            <div className="h-1 w-12 bg-blue-500 rounded"></div>
+
+            <p className="text-slate-400 max-w-2xl">
+              Continuously deepening expertise across distributed systems,
+              AI engineering, cloud-native architecture, and scalable platform design.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-3">
+            {CURRENTLY_EXPLORING.map((item, i) => (
+              <span
+                key={i}
+                className="px-4 py-2 rounded-full bg-slate-900 border border-slate-800 text-slate-300 text-sm hover:border-blue-500/40 transition-all"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="border-t border-slate-900 bg-slate-950/50">
@@ -184,6 +286,7 @@ export default function Portfolio() {
           </div>
           <div className="flex flex-wrap justify-center items-center gap-6">
             <a href="mailto:ysumit99@gmail.com" className="text-slate-400 hover:text-white transition"><Mail size={20} /></a>
+            <a href="https://sumityadav-dev.vercel.app" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition" aria-label="Blog"><BookOpen size={20} /></a>
             <a href="https://github.com/ysumit99" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition"><FaGithub size={20} /></a>
             <a href="https://www.linkedin.com/in/sumityadav-dev/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition"><FaLinkedin size={20} /></a>
           </div>

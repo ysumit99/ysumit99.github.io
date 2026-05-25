@@ -1,0 +1,126 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"></polygon>
+    </marker>
+
+    <style>
+      .title {
+        font: 700 20px Inter, system-ui, sans-serif;
+        fill: #f8fafc;
+      }
+
+      .label {
+        font: 600 15px Inter, system-ui, sans-serif;
+        fill: #e2e8f0;
+      }
+
+      .small {
+        font: 500 13px Inter, system-ui, sans-serif;
+        fill: #94a3b8;
+      }
+
+      .box {
+        fill: #0f172a;
+        stroke: #334155;
+        stroke-width: 2;
+      }
+
+      .engine {
+        fill: #1e1b4b;
+        stroke: #818cf8;
+        stroke-width: 2;
+      }
+
+      .storage {
+        fill: #064e3b;
+        stroke: #34d399;
+        stroke-width: 2;
+      }
+
+      .group {
+        fill: rgba(15,23,42,0.5);
+        stroke: #334155;
+        stroke-width: 2;
+      }
+
+      .arrow {
+        stroke: #94a3b8;
+        stroke-width: 2.5;
+        fill: none;
+        marker-end: url(#arrowhead);
+      }
+    </style>
+  </defs>
+
+  <text x="40" y="50" class="title">
+    Real-Time Notification Engine Architecture
+  </text>
+
+  <!-- Source -->
+  <rect x="60" y="300" width="240" height="80" rx="18" class="box"></rect>
+  <text x="180" y="345" text-anchor="middle" class="label">
+    Trigger Event / API Gateway
+  </text>
+
+  <!-- Persistence -->
+  <rect x="420" y="90" width="320" height="170" rx="22" class="group"></rect>
+  <text x="445" y="120" class="small">Persistence Layer</text>
+
+  <rect x="470" y="150" width="220" height="80" rx="16" class="storage"></rect>
+  <text x="580" y="195" text-anchor="middle" class="label">
+    Upstash Redis Feed
+  </text>
+
+  <!-- Fanout -->
+  <rect x="420" y="420" width="320" height="170" rx="22" class="group"></rect>
+  <text x="445" y="450" class="small">Fan-Out Engine</text>
+
+  <rect x="470" y="480" width="220" height="80" rx="16" class="engine"></rect>
+  <text x="580" y="525" text-anchor="middle" class="label">
+    Upstash QStash
+  </text>
+
+  <!-- Workers -->
+  <rect x="880" y="100" width="240" height="80" rx="16" class="box"></rect>
+  <text x="1000" y="145" text-anchor="middle" class="label">
+    Email Worker
+  </text>
+
+  <rect x="880" y="280" width="240" height="80" rx="16" class="box"></rect>
+  <text x="1000" y="325" text-anchor="middle" class="label">
+    SMS Worker
+  </text>
+
+  <rect x="880" y="470" width="240" height="80" rx="16" class="box"></rect>
+  <text x="1000" y="515" text-anchor="middle" class="label">
+    WebSocket Proxy / SSE
+  </text>
+
+  <rect x="880" y="640" width="240" height="80" rx="16" class="box"></rect>
+  <text x="1000" y="685" text-anchor="middle" class="label">
+    Next.js Client UI
+  </text>
+
+  <!-- Arrows -->
+
+  <line x1="300" y1="330" x2="470" y2="190" class="arrow"></line>
+  <text x="350" y="210" class="small">ZADD</text>
+
+  <line x1="300" y1="340" x2="470" y2="510" class="arrow"></line>
+  <text x="340" y="470" class="small">Publish JSON</text>
+
+  <polyline points="690,510 780,510 780,140 880,140" class="arrow"></polyline>
+  <text x="790" y="165" class="small">Webhook</text>
+
+  <polyline points="690,520 800,520 800,320 880,320" class="arrow"></polyline>
+  <text x="810" y="345" class="small">Webhook</text>
+
+  <polyline points="300,350 760,350 760,510 880,510" class="arrow"></polyline>
+  <text x="600" y="335" class="small">Pub/Sub</text>
+
+  <line x1="1000" y1="550" x2="1000" y2="640" class="arrow"></line>
+  <text x="1020" y="605" class="small">Real-time Push</text>
+
+</svg>
