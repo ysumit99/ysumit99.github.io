@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, ArrowRight, Server, Cloud, BookOpen, PenTool, BrainCircuit } from 'lucide-react';
+import { Mail, ArrowRight, Server, Cloud, BookOpen, PenTool, BrainCircuit, Download } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const PROJECTS = [
@@ -63,7 +63,7 @@ export default function Portfolio() {
           </h2>
           <p className="text-slate-400 max-w-2xl text-lg md:text-xl leading-relaxed">
             Full-Stack · Distributed Systems · AI Engineering<br/>
-            Building scalable platforms with React, Next.js, Node.js, TypeScript, AWS, Vercel, and AI integrations.
+            Designing scalable cloud-native platforms, real-time systems, and AI-powered applications with modern web technologies.
           </p>
         </div>
 
@@ -74,6 +74,9 @@ export default function Portfolio() {
         <div className="flex flex-wrap gap-4 pt-4">
           <a href="mailto:ysumit99@gmail.com" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition-all">
             Let's Talk <Mail size={18} />
+          </a>
+          <a href="/Sumit_Yadav_Resume_2026.pdf" download className="inline-flex items-center gap-2 bg-white text-slate-900 hover:bg-slate-200 px-6 py-3 rounded-lg font-semibold transition-all">
+            <Download size={18} /> Download Resume
           </a>
           <a href="https://sumityadav-dev.vercel.app" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-800 transition-all">
             <BookOpen size={18} /> Blog
