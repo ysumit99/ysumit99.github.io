@@ -173,7 +173,8 @@ export default function Portfolio() {
           ))}
         </div>
       </section>
-
+      
+      {/* Architecture & System Design */}
       <section className="border-t border-slate-900 bg-slate-900/20">
         <div className="max-w-5xl mx-auto px-6 py-20 space-y-10">
           
@@ -285,6 +286,7 @@ export default function Portfolio() {
           </div>
           <div className="flex flex-wrap justify-center items-center gap-6">
             <a href="mailto:ysumit99@gmail.com" className="text-slate-400 hover:text-white transition"><Mail size={20} /></a>
+            <a href="https://sumityadav-dev.vercel.app" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition" aria-label="Blog"><BookOpen size={20} /></a>
             <a href="https://github.com/ysumit99" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition"><FaGithub size={20} /></a>
             <a href="https://www.linkedin.com/in/sumityadav-dev/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition"><FaLinkedin size={20} /></a>
           </div>
