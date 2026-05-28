@@ -87,8 +87,8 @@ export default function Portfolio() {
             Senior Software Engineer → Staff Engineer
           </h2>
           <p className="text-slate-400 max-w-2xl text-lg md:text-xl leading-relaxed">
-            Full-Stack · Distributed Systems · AI Engineering<br/>
-            Designing scalable cloud-native platforms, real-time systems, and AI-powered applications with modern web technologies.
+            Distributed Systems · AI-Native Products · Cloud Architecture<br/>
+            Shipping production systems — RAG pipelines, real-time engines, and distributed architecture — with Next.js, TypeScript, and AWS.
           </p>
         </div>
 
