@@ -1,1 +1,24 @@
 @import "tailwindcss";
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19; /* Matches your deep dark background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b; /* A subtle lighter shade for the thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155; /* Slightly lighter on hover for feedback */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #1e293b #0b0f19;
+}
