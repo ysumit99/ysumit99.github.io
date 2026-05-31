@@ -34,6 +34,7 @@ const PROJECTS = [
 ];
 
 const ARTICLES = [
+  { title: "How I Built AlgoLens — Interactive Algorithm Visualizer from Scratch with Next.js, TypeScript & Vanilla CSS", link: "https://sumityadav-dev.vercel.app/blog/algolens-interactive-algorithm-visualizer" },
   { title: "Building a Real-Time Notification System with SSE, Redis & Next.js", link: "https://sumityadav-dev.vercel.app/blog/realtime-notification-engine" },
   { title: "How I Built a Production RAG Pipeline with Next.js and Pinecone", link: "https://sumityadav-dev.vercel.app/blog/rag-pipeline-nextjs-pinecone" },
   { title: "SAGA Pattern — How I'd Design Uber's Booking Flow", link: "https://sumityadav-dev.vercel.app/blog/saga-pattern-uber-booking" },
