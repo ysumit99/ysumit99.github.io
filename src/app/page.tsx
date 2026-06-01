@@ -4,6 +4,13 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const PROJECTS = [
   {
+    title: "Algorithms & System Design Visualizer",
+    description: "Watch algorithms come alive — interactive step-by-step visualizations for DSA and system design.",
+    tech: ["Next.js 16", "TypeScript 6", "CSS3", "Vercel"],
+    link: "https://algolens-cyan.vercel.app/",
+    repo: "https://github.com/ysumit99/algolens"
+  },
+  {
     title: "AI RAG Assistant",
     description: "Production RAG pipeline — upload PDFs and chat with an AI that references your documents.",
     tech: ["Next.js 16", "Gemini 2.5", "Pinecone", "Vercel AI SDK"],
@@ -30,7 +37,15 @@ const PROJECTS = [
     tech: ["Next.js 16", "MDX", "Tailwind", "Vercel"],
     link: "https://sumityadav-dev.vercel.app/",
     repo: null
+  },
+  {
+    title: "Staff Engineer Portfolio",
+    description: "Personal portfolio. Features live projects in AI engineering, distributed systems & real-time architecture.",
+    tech: ["Next.js 16", "TypeScript", "Tailwind", "GitHub Pages"],
+    link: "https://ysumit99.github.io/",
+    repo: "https://github.com/ysumit99/ysumit99.github.io"
   }
+  
 ];
 
 const ARTICLES = [
