@@ -1,77 +1,118 @@
-import React from 'react';
-import { Mail, ArrowRight, Server, Cloud, BookOpen, PenTool, BrainCircuit, Download } from 'lucide-react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import React from "react";
+import {
+  Mail,
+  ArrowRight,
+  Server,
+  Cloud,
+  BookOpen,
+  PenTool,
+  BrainCircuit,
+  Download,
+} from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const PROJECTS = [
   {
-    title: "Algorithms & System Design Visualizer",
-    description: "Watch algorithms come alive — interactive step-by-step visualizations for DSA and system design.",
-    tech: ["Next.js 16", "TypeScript 6", "CSS3", "Vercel"],
+    title: "AlgoLens: Interactive Algorithms & Distributed Systems Visualizer",
+    description:
+      "Watch algorithms come alive — interactive step-by-step visualizations for DSA and system design.",
+    tech: ["Next.js", "TypeScript", "CSS3", "Vercel"],
     link: "https://algolens-cyan.vercel.app/",
-    repo: "https://github.com/ysumit99/algolens"
+    repo: "https://github.com/ysumit99/algolens",
   },
   {
     title: "AI RAG Assistant",
-    description: "Production RAG pipeline — upload PDFs and chat with an AI that references your documents.",
-    tech: ["Next.js 16", "Gemini 2.5", "Pinecone", "Vercel AI SDK"],
+    description:
+      "Production RAG pipeline — upload PDFs and chat with an AI that references your documents.",
+    tech: ["Next.js", "Gemini", "Pinecone", "Vercel AI SDK"],
     link: "https://next-rag-assistant.vercel.app/",
-    repo: "https://github.com/ysumit99/next-rag-assistant"
+    repo: "https://github.com/ysumit99/next-rag-assistant",
   },
   {
     title: "Real-Time Notification Engine",
-    description: "Serverless event-driven architecture with fan-out worker queues and live SSE push updates.",
-    tech: ["Next.js 16", "Upstash Redis", "QStash", "SSE"],
+    description:
+      "Serverless event-driven architecture with fan-out worker queues and live SSE push updates.",
+    tech: ["Next.js", "Upstash Redis", "QStash", "SSE"],
     link: "https://next-realtime-notifications.vercel.app/",
-    repo: "https://github.com/ysumit99/next-realtime-notifications"
+    repo: "https://github.com/ysumit99/next-realtime-notifications",
   },
   {
     title: "Distributed URL Shortener",
-    description: "High-scale URL shortener with AP architecture, O(1) Redis lookups & edge redirects.",
+    description:
+      "High-scale URL shortener with AP architecture, O(1) Redis lookups & edge redirects.",
     tech: ["Next.js", "Upstash Redis", "Vercel"],
     link: "https://url-shortener-phi-sooty.vercel.app/",
-    repo: "https://github.com/ysumit99/url-shortener"
+    repo: "https://github.com/ysumit99/url-shortener",
   },
   {
-    title: "Staff Engineer Blog",
-    description: "Personal blog covering distributed systems, AI engineering & the road to Staff Engineer.",
-    tech: ["Next.js 16", "MDX", "Tailwind", "Vercel"],
+    title: "Engineering Blog",
+    description:
+      "Technical deep dives into distributed systems, AI engineering, and modern software architecture.",
+    tech: ["Next.js", "MDX", "Tailwind", "Vercel"],
     link: "https://sumityadav-dev.vercel.app/",
-    repo: null
+    repo: null,
   },
   {
-    title: "Staff Engineer Portfolio",
-    description: "Personal portfolio. Features live projects in AI engineering, distributed systems & real-time architecture.",
-    tech: ["Next.js 16", "TypeScript", "Tailwind", "GitHub Pages"],
+    title: "Engineering Portfolio",
+    description:
+      "Personal portfolio. Features live projects in AI engineering, distributed systems & real-time architecture.",
+    tech: ["Next.js", "TypeScript", "Tailwind", "GitHub Pages"],
     link: "https://ysumit99.github.io/",
-    repo: "https://github.com/ysumit99/ysumit99.github.io"
-  }
-  
+    repo: "https://github.com/ysumit99/ysumit99.github.io",
+  },
 ];
 
 const ARTICLES = [
-  { title: "How I Built AlgoLens — Interactive Algorithm Visualizer from Scratch with Next.js, TypeScript & Vanilla CSS", link: "https://sumityadav-dev.vercel.app/blog/algolens-interactive-algorithm-visualizer" },
-  { title: "Building a Real-Time Notification System with SSE, Redis & Next.js", link: "https://sumityadav-dev.vercel.app/blog/realtime-notification-engine" },
-  { title: "How I Built a Production RAG Pipeline with Next.js and Pinecone", link: "https://sumityadav-dev.vercel.app/blog/rag-pipeline-nextjs-pinecone" },
-  { title: "SAGA Pattern — How I'd Design Uber's Booking Flow", link: "https://sumityadav-dev.vercel.app/blog/saga-pattern-uber-booking" },
-  { title: "Scaling a Social Feed to 10 Million Users", link: "https://sumityadav-dev.vercel.app/blog/scaling-social-feed" },
-  { title: "Message Queues Explained — SQS vs Kafka vs SNS", link: "https://sumityadav-dev.vercel.app/blog/message-queues-sqs-kafka-sns" },
-  { title: "Consistent Hashing — Why Distributed Systems Can't Live Without It", link: "https://sumityadav-dev.vercel.app/blog/consistent-hashing" },
-  { title: "CAP Theorem Explained with Real-World Examples", link: "https://sumityadav-dev.vercel.app/blog/cap-theorem-explained" }
+  {
+    title:
+      "How I Built AlgoLens — Interactive Algorithm Visualizer from Scratch with Next.js, TypeScript & Vanilla CSS",
+    link: "https://sumityadav-dev.vercel.app/blog/algolens-interactive-algorithm-visualizer",
+  },
+  {
+    title: "Building a Real-Time Notification System with SSE, Redis & Next.js",
+    link: "https://sumityadav-dev.vercel.app/blog/realtime-notification-engine",
+  },
+  {
+    title: "How I Built a Production RAG Pipeline with Next.js and Pinecone",
+    link: "https://sumityadav-dev.vercel.app/blog/rag-pipeline-nextjs-pinecone",
+  },
+  {
+    title: "SAGA Pattern — How I'd Design Uber's Booking Flow",
+    link: "https://sumityadav-dev.vercel.app/blog/saga-pattern-uber-booking",
+  },
+  {
+    title: "Scaling a Social Feed to 10 Million Users",
+    link: "https://sumityadav-dev.vercel.app/blog/scaling-social-feed",
+  },
+  {
+    title: "Message Queues Explained — SQS vs Kafka vs SNS",
+    link: "https://sumityadav-dev.vercel.app/blog/message-queues-sqs-kafka-sns",
+  },
+  {
+    title: "Consistent Hashing — Why Distributed Systems Can't Live Without It",
+    link: "https://sumityadav-dev.vercel.app/blog/consistent-hashing",
+  },
+  {
+    title: "CAP Theorem Explained with Real-World Examples",
+    link: "https://sumityadav-dev.vercel.app/blog/cap-theorem-explained",
+  },
 ];
 
 const ARCHITECTURES = [
   {
     title: "Real-Time Notification Engine Architecture",
-    description: "Event-driven architecture using SSE, Redis persistence, QStash fan-out workers, and multi-channel delivery.",
+    description:
+      "Event-driven architecture using SSE, Redis persistence, QStash fan-out workers, and multi-channel delivery.",
     image: "/architecture/realtime-notification.svg",
-    link: "https://github.com/ysumit99/next-realtime-notifications"
+    link: "https://github.com/ysumit99/next-realtime-notifications",
   },
   {
     title: "AI RAG Pipeline Architecture",
-    description: "End-to-end Retrieval-Augmented Generation pipeline featuring document ingestion, semantic chunking, vector embeddings, Pinecone retrieval, prompt augmentation, and streaming AI responses.",
+    description:
+      "End-to-end Retrieval-Augmented Generation pipeline featuring document ingestion, semantic chunking, vector embeddings, Pinecone retrieval, prompt augmentation, and streaming AI responses.",
     image: "/architecture/rag-pipeline-architecture.svg",
-    link: "https://github.com/ysumit99/next-rag-assistant"
-  }
+    link: "https://github.com/ysumit99/next-rag-assistant",
+  },
 ];
 
 const CURRENTLY_EXPLORING = [
@@ -81,119 +122,123 @@ const CURRENTLY_EXPLORING = [
   "Kafka & Event Streaming",
   "Edge Runtime Architectures",
   "System Design for Scale",
-  "Realtime Collaboration Systems"
+  "Realtime Collaboration Systems",
 ];
 
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200 font-sans selection:bg-blue-500/30 selection:text-blue-200">
-      
       {/* Hero Section */}
       <header className="max-w-5xl mx-auto px-6 pt-24 pb-16 md:pt-32 md:pb-24 space-y-8">
         <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium text-blue-400 bg-blue-500/10 rounded-full border border-blue-500/20">
           <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-          Actively seeking Staff Engineer / Tech Lead roles
+          Building intelligent, scalable software systems.
         </div>
-        
+
         <div className="space-y-4">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
             Sumit Yadav
           </h1>
           <h2 className="text-xl md:text-2xl font-medium text-blue-400">
-            Senior Software Engineer → Staff Engineer
+            Engineering Leader specializing in AI, Distributed Systems & Cloud
+            Platforms
           </h2>
           <p className="text-slate-400 max-w-2xl text-lg md:text-xl leading-relaxed">
-            Distributed Systems · AI-Native Products · Cloud Architecture<br/>
-            Shipping production systems — RAG pipelines, real-time engines, and distributed architecture — with Next.js, TypeScript, and AWS.
+            Designing production-grade AI applications, distributed systems, and
+            cloud-native platforms with a focus on scalability, reliability, and
+            developer experience.
           </p>
         </div>
 
         <blockquote className="border-l-4 border-blue-500 pl-4 py-1 text-slate-300 italic max-w-2xl">
-          "I don't just write code — I architect systems that scale, lead teams that deliver, and solve problems that matter."
+          "Simplicity scales better than cleverness."
         </blockquote>
 
         <div className="flex flex-wrap gap-4 pt-4">
-          <a href="mailto:ysumit99@gmail.com" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition-all">
-            Let's Talk <Mail size={18} />
-          </a>
-          <a href="/Sumit_Yadav_Resume_2026.pdf" download className="inline-flex items-center gap-2 bg-white text-slate-900 hover:bg-slate-200 px-6 py-3 rounded-lg font-semibold transition-all">
+          <a
+            href="/Sumit_Yadav_Resume_2026.pdf"
+            download
+            className="inline-flex items-center gap-2 bg-white text-slate-900 hover:bg-slate-200 px-6 py-3 rounded-lg font-semibold transition-all"
+          >
             <Download size={18} /> Download Resume
           </a>
-          <a href="https://sumityadav-dev.vercel.app" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-800 transition-all">
-            <BookOpen size={18} /> Blog
-          </a>
-          <a href="https://github.com/ysumit99" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-800 transition-all">
+          <a
+            href="https://github.com/ysumit99"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-800 transition-all"
+          >
             <FaGithub size={18} /> GitHub
           </a>
-          <a href="https://www.linkedin.com/in/sumityadav-dev/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-800 transition-all">
+          <a
+            href="https://sumityadav-dev.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-800 transition-all"
+          >
+            <BookOpen size={18} /> Blog
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sumityadav-dev/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 px-6 py-3 rounded-lg font-semibold border border-slate-800 transition-all"
+          >
             <FaLinkedin size={18} /> LinkedIn
+          </a>
+          <a
+            href="mailto:ysumit99@gmail.com"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+          >
+            Contact <Mail size={18} />
           </a>
         </div>
       </header>
 
-      {/* Core Competencies */}
+      {/* Engineering Focus */}
       <section className="border-y border-slate-900 bg-slate-900/20">
         <div className="max-w-5xl mx-auto px-6 py-16">
-          <h2 className="text-2xl font-bold tracking-tight mb-8">Core Competencies</h2>
+          <h2 className="text-2xl font-bold tracking-tight mb-8">
+            Engineering Focus
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-5 bg-slate-900/50 rounded-xl border border-slate-800 space-y-3">
               <Server className="text-blue-400" size={24} />
-              <h3 className="font-semibold text-white">System Design & Architecture</h3>
-              <p className="text-sm text-slate-400">Distributed systems, microservices, and performance & scalability engineering.</p>
+              <h3 className="font-semibold text-white">
+                System Design & Architecture
+              </h3>
+              <p className="text-sm text-slate-400">
+                Distributed systems, microservices, and performance &
+                scalability engineering.
+              </p>
             </div>
             <div className="p-5 bg-slate-900/50 rounded-xl border border-slate-800 space-y-3">
               <BrainCircuit className="text-blue-400" size={24} />
-              <h3 className="font-semibold text-white">AI & LLM Integrations</h3>
-              <p className="text-sm text-slate-400">RAG pipelines, Vercel AI SDK, Gemini, vector databases, and agentic workflows.</p>
+              <h3 className="font-semibold text-white">
+                AI & LLM Integrations
+              </h3>
+              <p className="text-sm text-slate-400">
+                RAG pipelines, Vercel AI SDK, Gemini, vector databases, and
+                agentic workflows.
+              </p>
             </div>
             <div className="p-5 bg-slate-900/50 rounded-xl border border-slate-800 space-y-3">
               <Cloud className="text-blue-400" size={24} />
-              <h3 className="font-semibold text-white">Cloud-Native & DevOps</h3>
-              <p className="text-sm text-slate-400">AWS (Multi-region, Lambda@Edge), CI/CD practices, Kafka, and Kubernetes.</p>
+              <h3 className="font-semibold text-white">
+                Cloud-Native & DevOps
+              </h3>
+              <p className="text-sm text-slate-400">
+                Designing scalable cloud-native applications with AWS, Azure,
+                serverless architectures, and Kubernetes.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="max-w-5xl mx-auto px-6 py-20 space-y-10">
-        <div className="space-y-4">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Featured Engineering Projects</h2>
-          <div className="h-1 w-12 bg-blue-500 rounded"></div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {PROJECTS.map((project, i) => (
-            <div key={i} className="p-6 bg-slate-900/40 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-all flex flex-col h-full justify-between group">
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                  <a href={project.link} target="_blank" rel="noreferrer" className="flex items-center gap-2">
-                    {project.title} <ArrowRight size={16} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                </h3>
-                <p className="text-slate-400 text-sm leading-relaxed">{project.description}</p>
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {project.tech.map((t, idx) => (
-                    <span key={idx} className="px-2.5 py-1 text-xs font-medium bg-slate-950 text-slate-300 rounded-md border border-slate-800">{t}</span>
-                  ))}
-                </div>
-              </div>
-              {project.repo && (
-                <div className="pt-6 mt-auto">
-                  <a href={project.repo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors">
-                    <FaGithub size={16} /> View Source
-                  </a>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-      
       {/* Architecture & System Design */}
       <section className="border-t border-slate-900 bg-slate-900/20">
         <div className="max-w-5xl mx-auto px-6 py-20 space-y-10">
-          
           <div className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
               Architecture & System Design
@@ -214,11 +259,11 @@ export default function Portfolio() {
                 rel="noreferrer"
                 className="bg-slate-900/40 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/40 transition-all flex flex-col h-full"
               >
-               <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-[340px] object-contain p-6 bg-slate-950/40 border-b border-slate-800"
-              />
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-[340px] object-contain p-6 bg-slate-950/40 border-b border-slate-800"
+                />
 
                 <div className="p-6 space-y-3">
                   <h3 className="text-lg font-semibold text-white">
@@ -235,48 +280,135 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Featured Projects */}
+      <section className="max-w-5xl mx-auto px-6 py-20 space-y-10">
+        <div className="space-y-4">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+            Featured Engineering Projects
+          </h2>
+          <div className="h-1 w-12 bg-blue-500 rounded"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {PROJECTS.map((project, i) => (
+            <div
+              key={i}
+              className="p-6 bg-slate-900/40 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-all flex flex-col h-full justify-between group"
+            >
+              <div className="space-y-4">
+                <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    {project.title}{" "}
+                    <ArrowRight
+                      size={16}
+                      className="opacity-0 group-hover:opacity-100 transition-opacity"
+                    />
+                  </a>
+                </h3>
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {project.tech.map((t, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2.5 py-1 text-xs font-medium bg-slate-950 text-slate-300 rounded-md border border-slate-800"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              {project.repo && (
+                <div className="pt-6 mt-auto">
+                  <a
+                    href={project.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                  >
+                    <FaGithub size={16} /> View Source
+                  </a>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Technical Writing */}
       <section className="border-t border-slate-900 bg-slate-950">
         <div className="max-w-5xl mx-auto px-6 py-20 space-y-10">
           <div className="flex justify-between items-end">
             <div className="space-y-4">
-              <h2 className="text-2xl md:text-3xl font-bold tracking-tight">Technical Writing</h2>
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
+                Technical Writing
+              </h2>
               <div className="h-1 w-12 bg-blue-500 rounded"></div>
-              <p className="text-slate-400 max-w-2xl">Deep technical breakdowns on distributed systems, AI engineering, and Staff-level architecture thinking.</p>
+              <p className="text-slate-400 max-w-2xl">
+                Deep technical articles on distributed systems, AI engineering,
+                and modern software architecture.
+              </p>
             </div>
-            <a href="https://sumityadav-dev.vercel.app" target="_blank" rel="noreferrer" className="hidden md:inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium">
+            <a
+              href="https://sumityadav-dev.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden md:inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium"
+            >
               Read Blog <BookOpen size={18} />
             </a>
           </div>
 
           <div className="grid gap-3">
             {ARTICLES.map((article, i) => (
-              <a key={i} href={article.link} target="_blank" rel="noreferrer" className="flex items-center gap-4 p-4 rounded-lg hover:bg-slate-900/80 transition-colors border border-transparent hover:border-slate-800 group">
-                <PenTool size={16} className="text-slate-600 group-hover:text-blue-400 flex-shrink-0" />
-                <span className="font-medium text-slate-300 group-hover:text-white">{article.title}</span>
+              <a
+                key={i}
+                href={article.link}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-4 p-4 rounded-lg hover:bg-slate-900/80 transition-colors border border-transparent hover:border-slate-800 group"
+              >
+                <PenTool
+                  size={16}
+                  className="text-slate-600 group-hover:text-blue-400 flex-shrink-0"
+                />
+                <span className="font-medium text-slate-300 group-hover:text-white">
+                  {article.title}
+                </span>
               </a>
             ))}
           </div>
-          
-          <a href="https://sumityadav-dev.vercel.app" target="_blank" rel="noreferrer" className="md:hidden inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium pt-4">
+
+          <a
+            href="https://sumityadav-dev.vercel.app"
+            target="_blank"
+            rel="noreferrer"
+            className="md:hidden inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium pt-4"
+          >
             Read all posts <ArrowRight size={16} />
           </a>
         </div>
       </section>
-      
+
       <section className="border-t border-slate-900 bg-slate-950">
         <div className="max-w-5xl mx-auto px-6 py-20 space-y-8">
-          
           <div className="space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
-              Currently Exploring
+              Current Engineering Focus
             </h2>
 
             <div className="h-1 w-12 bg-blue-500 rounded"></div>
 
             <p className="text-slate-400 max-w-2xl">
-              Continuously deepening expertise across distributed systems,
-              AI engineering, cloud-native architecture, and scalable platform design.
+              Continuously deepening expertise across distributed systems, AI
+              engineering, cloud-native architecture, and scalable platform
+              design.
             </p>
           </div>
 
@@ -298,13 +430,42 @@ export default function Portfolio() {
         <div className="max-w-5xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="space-y-1 text-center md:text-left">
             <p className="text-base font-bold text-white">Sumit Yadav</p>
-            <p className="text-sm text-slate-500">Staff Engineer &amp; System Architect</p>
+            <p className="text-sm text-slate-500">
+              Building intelligent, scalable software systems.
+            </p>
           </div>
           <div className="flex flex-wrap justify-center items-center gap-6">
-            <a href="mailto:ysumit99@gmail.com" className="text-slate-400 hover:text-white transition"><Mail size={20} /></a>
-            <a href="https://sumityadav-dev.vercel.app" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition" aria-label="Blog"><BookOpen size={20} /></a>
-            <a href="https://github.com/ysumit99" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition"><FaGithub size={20} /></a>
-            <a href="https://www.linkedin.com/in/sumityadav-dev/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition"><FaLinkedin size={20} /></a>
+            <a
+              href="mailto:ysumit99@gmail.com"
+              className="text-slate-400 hover:text-white transition"
+            >
+              <Mail size={20} />
+            </a>
+            <a
+              href="https://sumityadav-dev.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-400 hover:text-white transition"
+              aria-label="Blog"
+            >
+              <BookOpen size={20} />
+            </a>
+            <a
+              href="https://github.com/ysumit99"
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-400 hover:text-white transition"
+            >
+              <FaGithub size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sumityadav-dev/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-slate-400 hover:text-white transition"
+            >
+              <FaLinkedin size={20} />
+            </a>
           </div>
         </div>
       </footer>

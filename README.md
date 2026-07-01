@@ -1,11 +1,11 @@
-# Sumit Yadav | Staff Engineer Portfolio
+# Sumit Yadav | Software Engineer Portfolio
 
 [![Deploy to GitHub Pages](https://github.com/ysumit99/ysumit99.github.io/actions/workflows/deployment.yml/badge.svg)](https://github.com/ysumit99/ysumit99.github.io/actions/workflows/deployment.yml)
 [![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-The personal portfolio and engineering hub for **Sumit Yadav**, a Staff Software Engineer specializing in distributed systems, AI integrations, and highly scalable cloud-native architectures.
+The personal portfolio and engineering hub for **Sumit Yadav**, a Lead Software Engineer architecting intelligent, scalable software systems across AI, distributed systems, and cloud-native platforms
 
 🌐 **Live Site:** [ysumit99.github.io](https://ysumit99.github.io/)
 
@@ -34,17 +34,20 @@ This portfolio is engineered for maximum performance, SEO optimization, and zero
 To run this project locally and experiment with the architecture:
 
 **1. Clone the repository**
+
 ```bash
 git clone [https://github.com/ysumit99/ysumit99.github.io.git](https://github.com/ysumit99/ysumit99.github.io.git)
 cd ysumit99.github.io
 ```
 
 **2. Install dependencies**
+
 ```bash
 npm install
 ```
 
 **3. Run the development server**
+
 ```bash
 npm run dev
 ```
@@ -72,7 +75,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## 🤝 Connect
 
-I am actively seeking Staff Engineer and Technical Leadership roles. If you are building ambitious, highly scalable systems, let's talk.
+Always interested in conversations about AI, distributed systems, architecture and building software that scales.
 
 - [LinkedIn](https://www.linkedin.com/in/sumityadav-dev/)
 - [Email](mailto:ysumit99@gmail.com)
@@ -87,4 +90,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 _Designed and engineered by [Sumit Yadav](https://ysumit99.github.io/) · [Blog](https://sumityadav-dev.vercel.app) · [LinkedIn](https://www.linkedin.com/in/sumityadav-dev/) · [GitHub](https://github.com/ysumit99/) © 2026_
-
