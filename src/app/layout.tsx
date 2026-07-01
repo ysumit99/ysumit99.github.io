@@ -1,41 +1,59 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Sumit Yadav | Staff Software Engineer & System Architect',
-  description: 'Portfolio of Sumit Yadav, a Staff Software Engineer specializing in scalable full-stack platforms, distributed systems, and AI engineering with React, Next.js, Node.js, and AWS.',
+  title: "Sumit Yadav | AI • Distributed Systems • Modern Software Engineering",
+  description:
+    "Lead Software Engineer building intelligent, scalable software systems at the intersection of AI, distributed systems, and modern software engineering. Explore projects, architecture case studies, and technical articles.",
   keywords: [
-    'Sumit Yadav', 
-    'Staff Engineer', 
-    'Tech Lead', 
-    'Senior Software Engineer', 
-    'Distributed Systems', 
-    'Next.js', 
-    'React', 
-    'AWS', 
-    'AI Engineering', 
-    'System Architecture'
+    "Sumit Yadav",
+    "Lead Software Engineer",
+    "Software Engineer Portfolio",
+    "AI Engineering",
+    "Distributed Systems",
+    "System Design",
+    "Cloud Architecture",
+    "Full Stack Engineering",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "AWS",
+    "Azure",
+    "Redis",
+    "Kafka",
+    "RAG",
+    "LLMs",
+    "Vercel AI SDK",
+    "Pinecone",
+    "Technical Blog",
   ],
-  authors: [{ name: 'Sumit Yadav' }],
-  creator: 'Sumit Yadav',
+  authors: [{ name: "Sumit Yadav" }],
+  creator: "Sumit Yadav",
+  alternates: {
+    canonical: "https://ysumit99.github.io/",
+  },
   openGraph: {
-    title: 'Sumit Yadav | Staff Software Engineer',
-    description: 'Building scalable platforms with React, Next.js, Node.js, TypeScript, AWS, Vercel, and AI integrations.',
-    url: 'https://ysumit99.github.io/',
-    siteName: 'Sumit Yadav Portfolio',
-    type: 'website',
-    locale: 'en_US',
+    title: "Sumit Yadav | Building Intelligent, Scalable Software Systems",
+    description:
+      "Engineering portfolio featuring AI applications, distributed systems, cloud-native platforms, architecture case studies, and technical writing.",
+    url: "https://ysumit99.github.io/",
+    siteName: "Sumit Yadav Portfolio",
+    type: "website",
+    locale: "en_US",
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Sumit Yadav | Staff Software Engineer',
-    description: 'Building scalable platforms with React, Next.js, TypeScript, AWS, and AI integrations.',
-    creator: '@ysumit99',
+    card: "summary_large_image",
+    title: "Sumit Yadav | Building Intelligent, Scalable Software Systems",
+    description:
+      "AI engineering, distributed systems, cloud-native architecture, open-source projects, and technical writing.",
+    creator: "@ysumit99",
   },
   robots: {
     index: true,
     follow: true,
-  }
+  },
+  themeColor: "#020617",
 };
 
 export default function RootLayout({
